@@ -5,4 +5,4 @@ A module of add which sums 2 floats
 
 
 def add(a: float, b: float) -> float:
-    return a + b
+    return float(a + b)
