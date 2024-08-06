@@ -13,4 +13,10 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     '''
     tasks = [wait_random(max_delay) for _ in range(n)]
     retVal: List[float] = await asyncio.gather(*tasks)
+
+    for i in range(len(retVal)):
+        for j in range(0, len(retVal) - i - 1):
+            if retVal[j] > retVal[j + 1]:
+                retVal[j], retVal[j + 1] = retVal[j + 1], retVal[j]
+
     return retVal
