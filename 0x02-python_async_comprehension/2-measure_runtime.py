@@ -16,5 +16,4 @@ async def measure_runtime() -> float:
     await asyncio.gather(*tasks)
     end_time = time.time()
 
-    elapsed = (endtime - start_time) / 4
-    return elapsed
+    return (end_time - start_time)
