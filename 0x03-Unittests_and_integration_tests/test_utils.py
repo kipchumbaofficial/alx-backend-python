@@ -72,6 +72,7 @@ class TestMemoize(unittest.TestCase):
 
             @memoize
             def a_property(self):
+                """Memoized property"""
                 return self.a_method()
 
         # Use patch to mock a_method
